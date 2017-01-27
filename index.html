@@ -83,11 +83,11 @@
 		<script>
 			$(function(){
 
-				$("#highlight-title").append(Fish);
-				$("#highlight-description").append(info[Fish].description);
-				$("#highlight-tags").append("<b>"+info[Fish].tags+"</b>");
-				$("#highlight-snippet").append(info[Fish].snippet);
-				$("#highlight-thumb").attr("src",$(Fish).children("img").attr("src"));
+				$("#highlight-title").append('Fish');
+				$("#highlight-description").append(info['Fish'].description);
+				$("#highlight-tags").append("<b>"+info['Fish'].tags+"</b>");
+				$("#highlight-snippet").append(info['Fish'].snippet);
+				$("#highlight-thumb").attr("src",$('Fish').children("img").attr("src"));
 				Prism.highlightAll();
 
 
