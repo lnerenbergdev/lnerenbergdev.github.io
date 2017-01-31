@@ -6,6 +6,7 @@ var fieldSize = {x:40, y:26};
 var canvasSize = {x:1440, y:700};
 
 function setup() {
+  frameRate(10);
   var canvas = createCanvas(canvasSize.x, canvasSize.y);
   canvas.parent("canvas");
   
