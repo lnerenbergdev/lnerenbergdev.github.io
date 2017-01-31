@@ -67,6 +67,6 @@ function Body(_x,_y,_r){
     var normForce = {x:(this.totalForce.x/this.mass)/forceMag, y:(this.totalForce.y/this.mass)/forceMag};
     
     line(this.location.x,this.location.y,this.location.x + normForce.x * vectorMag,this.location.y + normForce.y * vectorMag);
-    stroke(150);
+    stroke(100);
   };
 }
