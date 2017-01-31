@@ -3,7 +3,7 @@ var vectors = [];
 
 var fieldSize = {x:40, y:26};
 
-var canvasSize = {x:1440, y:568};
+var canvasSize = {x:1440, y:700};
 
 function setup() {
   var canvas = createCanvas(canvasSize.x, canvasSize.y);
