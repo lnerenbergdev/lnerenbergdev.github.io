@@ -9,11 +9,10 @@ function setup() {
   frameRate(30);
   var x_ = 0
   if(windowWidth < 2000){
-    x_ = displayWidth;
+    canvasSize = {x:displayWidth, y:windowHeight};
   } else{
-    x_ = displayWidth/3;
+    canvasSize = {x:displayWidth/3, y:windowHeight};
   }
-  canvasSize = {x:displayWidth/3, y:windowHeight};
   var canvas = createCanvas(canvasSize.x, canvasSize.y);
   canvas.parent("canvas");
   
