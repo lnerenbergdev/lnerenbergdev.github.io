@@ -8,7 +8,7 @@ var canvasSize = {x:200, y:200};
 function setup() {
   frameRate(30);
   var x_ = 0
-  if(windowWidth < 1000){
+  if(windowWidth < 2000){
     x_ = displayWidth;
   } else{
     x_ = displayWidth/3;
