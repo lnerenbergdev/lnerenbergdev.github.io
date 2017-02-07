@@ -5,20 +5,18 @@ var fieldSize = {x:20, y:20};
 
 var canvasSize = {x:200, y:200};
 
+var prevWindowSize = {x:0,y:0};
+
 function setup() {
   frameRate(30);
-  var x_ = 0
-  if(windowWidth < 2000){
-    canvasSize = {x:displayWidth, y:windowHeight};
-  } else{
-    canvasSize = {x:displayWidth/3, y:windowHeight};
-  }
+  canvasSize = {x:windowWidth, y:windowHeight};
+  prevWindowSize = {x:windowWidth, y:windowHeight};
   var canvas = createCanvas(canvasSize.x, canvasSize.y);
   canvas.parent("canvas");
   
   background(0);
-  planets.push(new Body(int(displayWidth/3-(displayWidth/3/2)),int(windowHeight-175),50));
-  planets.push(new Body(int(displayWidth/3-(displayWidth/3/2)),int(windowHeight-175)+100,20));
+  planets.push(new Body(int(windowWidth/2),int(windowHeight-175),50));
+  planets.push(new Body(int(windowWidth/2),int(windowHeight-175)+100,20));
   planets[1].velocity.x = 2;
   for(var i = 0; i < fieldSize.x; i++){
     vectors.push([]);
@@ -30,16 +28,34 @@ function setup() {
 
 function draw() {
   background(10, 10, 10); 
+
+  if(prevWindowSize.x != windowWidth){
+    canvasSize = {x:windowWidth, y:windowHeight};
+    planets[0] = new Body(int(windowWidth/2),int(windowHeight-175),50);
+    planets[1] = new Body(int(windowWidth/2),int(windowHeight-175)+100,20);
+    planets[1].velocity.x = 2;
+    vectors = [];
+    for(var i = 0; i < fieldSize.x; i++){
+      vectors.push([]);
+      for(var j = 0; j < fieldSize.y; j++){
+        vectors[i].push(new Body(i * int(canvasSize.x / fieldSize.x) + 10,j * int(canvasSize.y / fieldSize.y) + int((canvasSize.y / fieldSize.y)/2),5));
+      }
+    }
+  }
+
   for(var i = 0; i < fieldSize.x; i++){
     for(var j = 0; j < fieldSize.y; j++){
       vectors[i][j].displayVector(planets,30);
-      //vectors[i][j].display();
     }
   }
+  
   planets[1].calculateAttraction(planets,1)
   planets[1].update();
   planets[1].display();
   planets[0].display();
+
+  prevWindowSize.x = windowWidth;
+  prevWindowSize.y = windowHeight;
 }
 
 
