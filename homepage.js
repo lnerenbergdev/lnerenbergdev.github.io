@@ -9,8 +9,8 @@ var prevWindowSize = {x:0,y:0};
 
 function setup() {
   frameRate(30);
-  canvasSize = {x:windowWidth, y:windowHeight};
-  prevWindowSize = {x:windowWidth, y:windowHeight};
+  canvasSize = {x:displayWidth, y:windowHeight};
+  prevWindowSize = {x:displayWidth, y:windowHeight};
   var canvas = createCanvas(canvasSize.x, canvasSize.y);
   canvas.parent("canvas");
   
