@@ -30,7 +30,7 @@ function setup() {
 }
 
 function draw() {
-  background(250, 250, 250); 
+  background(10, 10, 10); 
   for(var i = 0; i < fieldSize.x; i++){
     for(var j = 0; j < fieldSize.y; j++){
       vectors[i][j].displayVector(planets,30);

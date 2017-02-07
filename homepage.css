@@ -1,6 +1,9 @@
 body {
-	padding: 0; 
+	background-image:url("images/hubble.jpg");
 	margin: 0;
 	font-family: Century, Gothic, sans-serif;
 }
 
+nav {
+	background: rgba(255, 255, 255, 0.7);
+}
