@@ -21,7 +21,7 @@ function setup() {
   for(var i = 0; i < fieldSize.x; i++){
     vectors.push([]);
     for(var j = 0; j < fieldSize.y; j++){
-      vectors[i].push(new Body(i * int(canvasSize.x / fieldSize.x) + 10,j * int(canvasSize.y / fieldSize.y) + int((canvasSize.y / fieldSize.y)/2),5));
+      vectors[i].push(new Body(i * int(canvasSize.x / fieldSize.x) + int(canvasSize.x / fieldSize.x / 2),j * int(canvasSize.y / fieldSize.y) + int((canvasSize.y / fieldSize.y)/2),5));
     }
   }
 }
@@ -38,7 +38,7 @@ function draw() {
     for(var i = 0; i < fieldSize.x; i++){
       vectors.push([]);
       for(var j = 0; j < fieldSize.y; j++){
-        vectors[i].push(new Body(i * int(canvasSize.x / fieldSize.x) + 10,j * int(canvasSize.y / fieldSize.y) + int((canvasSize.y / fieldSize.y)/2),5));
+        vectors[i].push(new Body(i * int(canvasSize.x / fieldSize.x) + int(canvasSize.x / fieldSize.x / 2),j * int(canvasSize.y / fieldSize.y) + int((canvasSize.y / fieldSize.y)/2),5));
       }
     }
   }
