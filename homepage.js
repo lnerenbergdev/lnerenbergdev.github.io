@@ -1,7 +1,7 @@
 var planets = [];
 var vectors = [];
 
-var fieldSize = {x:20, y:20};
+var fieldSize = {x:40, y:40};
 
 var canvasSize = {x:200, y:200};
 
