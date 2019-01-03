@@ -34,7 +34,7 @@ function draw() {
     canvasSize = {x:windowWidth, y:windowHeight};
     planets[0] = new Body(int(windowWidth/2),int(windowHeight-175),50);
     planets[1] = new Body(int(windowWidth/2),int(windowHeight-175)+100,20);
-    planets[1] = new Body(int(windowWidth/2),int(windowHeight-175)+200,20);
+    planets[2] = new Body(int(windowWidth/2),int(windowHeight-175)+200,20);
     planets[1].velocity.x = 2;
     planets[2].velocity.x = 3;
     vectors = [];
