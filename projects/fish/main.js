@@ -38,7 +38,7 @@ var parentWeights = [];
 var recorded = false;
 
 function draw() {
-	//background(10);
+	background(10);
 
 	numAlive = 0;
 	for(var f of fish){
